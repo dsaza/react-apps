@@ -1,0 +1,138 @@
+.tw-followCard {
+	background: rgb(22, 24, 28);
+	max-width: 350px;
+	margin: 2rem auto;
+	border-radius: 1rem;
+	overflow: hidden;
+}
+
+.tw-followCard-title {
+	margin: 0;
+	padding: 12px 16px;
+	color: rgb(255, 255, 255);
+}
+
+.tw-followCard-item {
+	align-items: center;
+	display: flex;
+	gap: 20px;
+	justify-content: space-between;
+	padding: 12px 16px;
+}
+
+.tw-followCard-item:hover {
+	cursor: pointer;
+	background: rgba(255,255,255,.03);
+}
+
+.tw-followCard-item > header {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+}
+
+.tw-followCard-item > header > img {
+	width: 48px;
+	aspect-ratio: 1/1;
+	border-radius: 50%;
+	user-select: none;
+}
+
+.tw-followCard-item > header > img:hover {
+	opacity: .85;
+	transition: ease .3s;
+}
+
+.tw-followCard-item > header > div > a,
+.tw-followCard-item > header > div > span {
+	display: block;
+	font-size: 15px;
+}
+
+.tw-followCard-item > header > div > a {
+	color: rgb(255, 255, 255);
+	font-weight: bold;
+	text-decoration: none;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	width: 100%;
+	max-width: 150px;
+}
+
+.tw-followCard-item.tw-isFollowing > header > div > a {
+	max-width: 100px;
+
+}
+
+.tw-followCard-item > header > div > a:hover {
+	text-decoration: underline;
+}
+
+.tw-followCard-item > header > div > span {
+	color: rgb(113, 118, 123);
+}
+
+.tw-followCard-item > aside > button {
+	outline: none;
+	box-shadow: none;
+	border: 1px solid transparent;
+	background: rgb(239, 243, 244);
+	font-weight: bold;
+	font-size: 13px;
+	padding: 0 20px;
+	min-height: 32px;
+	border-radius: 20px;
+	user-select: none;
+}
+
+.tw-followCard-item.tw-isFollowing > aside > button {
+	background: transparent;
+	border-color: rgb(83, 100, 113);
+	color: rgb(255, 255, 255);
+	padding: 0;
+	position: relative;
+	width: 130px;
+	overflow: hidden;
+}
+
+.tw-followCard-item > aside > button:hover {
+	cursor: pointer;
+	opacity: .9;
+	transition: ease .3s;
+}
+
+.tw-followCard-item.tw-isFollowing > aside > button::after,
+.tw-followCard-item.tw-isFollowing > aside > button::before {
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+.tw-followCard-item.tw-isFollowing > aside > button::after {
+	background: rgb(22, 24, 28);
+	z-index: 1;
+}
+
+.tw-followCard-item.tw-isFollowing > aside > button::before {
+	align-items: center;
+	background: rgba(244, 33, 46, .1);
+	color: rgb(244, 33, 46);
+	display: flex;
+	justify-content: center;
+	z-index: 2;
+}
+
+.tw-followCard-item.tw-isFollowing > aside > button:hover {
+	border-color: rgb(103, 7, 15);
+}
+
+.tw-followCard-item.tw-isFollowing > aside > button:hover::after {
+	content: '';
+}
+
+.tw-followCard-item.tw-isFollowing > aside > button:hover::before {
+	content: 'Dejar de seguir';
+}
