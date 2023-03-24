@@ -2,7 +2,7 @@ import Square from './Square'
 
 export default function Board({ board, updateBoard }) {
 	return (
-		<section className='grid grid-cols-3'>
+		<section className='grid grid-cols-3 gap-2'>
 			{
 				board.map((item, index) => (
 					<Square
