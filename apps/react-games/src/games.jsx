@@ -1,5 +1,6 @@
 import { Triqui } from './games/triqui'
 import { Memotest } from './games/memotest'
+import { WordsPerMinute } from './games/words-per-minute'
 
 export const games = [
   {
@@ -13,5 +14,11 @@ export const games = [
     name: 'Memotest',
     image: 'memotest.png',
     element: <Memotest />
+  },
+  {
+    id: 'words-per-minute',
+    name: 'Palabras por minuto',
+    image: 'memotest.png',
+    element: <WordsPerMinute />
   },
 ]
