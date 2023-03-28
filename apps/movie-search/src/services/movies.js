@@ -1,7 +1,7 @@
 const API_KEY = import.meta.env.VITE_API_KEY
 const API_URL = 'https://www.omdbapi.com'
 
-function setApiUrl(parameters = {}) {
+function setApiUrl (parameters = {}) {
   const url = new URL(API_URL)
 
   url.searchParams.append('apiKey', API_KEY)
@@ -13,7 +13,7 @@ function setApiUrl(parameters = {}) {
   return url
 }
 
-function setMappedMovies(movies) {
+function setMappedMovies (movies) {
   return movies?.map(movie => ({
     id: movie.imdbID,
     title: movie.Title,
@@ -23,15 +23,15 @@ function setMappedMovies(movies) {
   }))
 }
 
-export async function readMoviesByTitle({ search }) {
+export async function readMoviesByTitle ({ search }) {
   if (search === '') return []
 
   try {
     const response = await fetch(setApiUrl({ s: search }))
     const result = await response.json()
-    
+
     const movies = result.Search
-    
+
     if (!movies || !movies?.length > 0) return []
 
     return setMappedMovies(movies)

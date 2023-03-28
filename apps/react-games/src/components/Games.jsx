@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
-import { games } from "../games";
+import { games } from '../games'
 
-export function Games() {
+export function Games () {
   return (
     <section className='grid grid-cols-[repeat(auto-fill,_minmax(160px,_6fr))] gap-8'>
       {games.map(game => {

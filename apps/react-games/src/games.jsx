@@ -20,5 +20,5 @@ export const games = [
     name: 'Palabras por minuto',
     image: 'memotest.png',
     element: <WordsPerMinute />
-  },
+  }
 ]

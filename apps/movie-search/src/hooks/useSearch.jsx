@@ -1,6 +1,6 @@
-import { useState, useRef, useEffect } from "react"
+import { useState, useRef, useEffect } from 'react'
 
-export function useSearch() {
+export function useSearch () {
   const [search, setSearch] = useState('Avengers')
   const [error, setError] = useState(null)
   const isFirstInput = useRef(true)

@@ -1,8 +1,8 @@
-import { useEffect } from "react";
-import { useState } from "react";
-import { TARGET_IMAGES } from "../constans";
+import { useEffect, useState } from 'react'
 
-export function useImages() {
+import { TARGET_IMAGES } from '../constans'
+
+export function useImages () {
   const [type, setType] = useState('')
   const [images, setImages] = useState([])
 

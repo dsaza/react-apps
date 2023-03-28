@@ -10,8 +10,8 @@ export const TARGET_IMAGES = [
       'https://icongr.am/devicon/chrome-plain.svg?size=128&color=ffffff',
       'https://icongr.am/devicon/firefox-plain.svg?size=128&color=ffffff',
       'https://icongr.am/devicon/safari-plain.svg?size=128&color=ffffff',
-      'https://icongr.am/devicon/safari-line.svg?size=128&color=ffffff',
-    ],
+      'https://icongr.am/devicon/safari-line.svg?size=128&color=ffffff'
+    ]
   },
   {
     id: 'lang',
@@ -26,7 +26,7 @@ export const TARGET_IMAGES = [
       'https://icongr.am/devicon/csharp-original.svg?size=128&color=currentColor',
       'https://icongr.am/devicon/typescript-original.svg?size=128&color=currentColor',
       'https://icongr.am/devicon/cplusplus-original.svg?size=128&color=currentColor',
-      'https://icongr.am/devicon/javascript-original.svg?size=128&color=currentColor',
+      'https://icongr.am/devicon/javascript-original.svg?size=128&color=currentColor'
     ]
   },
   {
@@ -42,7 +42,7 @@ export const TARGET_IMAGES = [
       'https://icongr.am/devicon/react-original.svg?size=128&color=currentColor',
       'https://icongr.am/devicon/sass-original.svg?size=128&color=currentColor',
       'https://icongr.am/devicon/typescript-original.svg?size=128&color=currentColor',
-      'https://icongr.am/devicon/vuejs-original.svg?size=128&color=currentColor',
+      'https://icongr.am/devicon/vuejs-original.svg?size=128&color=currentColor'
     ]
   },
   {
@@ -58,7 +58,7 @@ export const TARGET_IMAGES = [
       'https://icongr.am/devicon/python-original.svg?size=128&color=currentColor',
       'https://icongr.am/devicon/redis-original.svg?size=128&color=currentColor',
       'https://icongr.am/devicon/wordpress-original.svg?size=128&color=currentColor',
-      'https://icongr.am/devicon/drupal-original.svg?size=128&color=currentColor',
+      'https://icongr.am/devicon/drupal-original.svg?size=128&color=currentColor'
     ]
-  },
+  }
 ]

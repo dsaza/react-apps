@@ -1,10 +1,10 @@
-import { useState } from "react"
+import { useState } from 'react'
 
 const MIN_SECONDS = 50
 const INIT_SECONDS = 90
 const MAX_SECONDS = 150
 
-export function useGame() {
+export function useGame () {
   const [isStart, setIsStart] = useState(false)
   const [time, setTime] = useState(INIT_SECONDS)
   const [isWin, setIsWin] = useState('ns')

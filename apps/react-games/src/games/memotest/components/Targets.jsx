@@ -1,10 +1,10 @@
-import { useEffect } from 'react'
-import { useMemo, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
+
 import { useTargets } from '../hooks/useTargets'
 import { transformImages } from '../utils'
 import { TargetSimple } from './TargetSimple'
 
-export function Targets({ images, game }) {
+export function Targets ({ images, game }) {
   const { time: timeGame, loseGame, winGame, resetGame } = game
 
   const [isShowTargets, setIsShowTargets] = useState(false)
@@ -21,7 +21,7 @@ export function Targets({ images, game }) {
   useEffect(() => {
     const timeoutStart = setTimeout(() => {
       setIsShowTargets(true)
-    }, 3000);
+    }, 3000)
 
     return () => clearTimeout(timeoutStart)
   }, [])
@@ -34,7 +34,7 @@ export function Targets({ images, game }) {
         if (newCountStart === 0) clearInterval(startingGame)
         return newCountStart
       })
-    }, 1000);
+    }, 1000)
 
     return () => clearInterval(startingGame)
   }, [])
@@ -42,17 +42,19 @@ export function Targets({ images, game }) {
   // useEffect for change count down value of game
   useEffect(() => {
     const timeOfGame = setInterval(() => {
-      if (isShowTargets) setCountOfGame(prevCountOfGame => {
-        const newCountOfGame = prevCountOfGame - 1
+      if (isShowTargets) {
+        setCountOfGame(prevCountOfGame => {
+          const newCountOfGame = prevCountOfGame - 1
 
-        if (newCountOfGame === 0) {
-          loseGame()
-          clearInterval(timeOfGame)
-        }
+          if (newCountOfGame === 0) {
+            loseGame()
+            clearInterval(timeOfGame)
+          }
 
-        return newCountOfGame
-      })
-    }, 1000);
+          return newCountOfGame
+        })
+      }
+    }, 1000)
 
     return () => clearInterval(timeOfGame)
   }, [isShowTargets])
@@ -64,11 +66,13 @@ export function Targets({ images, game }) {
     }
   }, [guessed])
 
-  if (!isShowTargets) return (
-    <div className='max-w-[350px] mx-auto aspect-square border border-white rounded-full flex justify-center items-center bg-[rgba(0,0,0,.2)] font-bold text-9xl'>
-      {countStart}
-    </div>
-  )
+  if (!isShowTargets) {
+    return (
+      <div className='max-w-[350px] mx-auto aspect-square border border-white rounded-full flex justify-center items-center bg-[rgba(0,0,0,.2)] font-bold text-9xl'>
+        {countStart}
+      </div>
+    )
+  }
 
   return (
     <>
@@ -77,17 +81,17 @@ export function Targets({ images, game }) {
         <p className='text-3xl font-bold'>{countOfGame}</p>
         <p className='text-xs'>segundos</p>
       </div>
-      <ul className="max-w-[530px] mx-auto grid gap-2 sm:gap-4" style={{ gridTemplateColumns: `repeat(${targetCols.current}, 1fr)` }}>
+      <ul className='max-w-[530px] mx-auto grid gap-2 sm:gap-4' style={{ gridTemplateColumns: `repeat(${targetCols.current}, 1fr)` }}>
         {transformedImages.map((image) => <TargetSimple
           key={image}
           image={image}
           guessed={guessed}
           selected={selected}
           onClickTarget={(image) => selected.length < 2 && addSelected(image)}
-        />)}
+                                          />)}
       </ul>
       <div className='max-w-[530px] mx-auto mt-8 text-right'>
-        <button type='button' onClick={resetGame} className="text-xs font-bold underline">Me rindo</button>
+        <button type='button' onClick={resetGame} className='text-xs font-bold underline'>Me rindo</button>
       </div>
     </>
   )

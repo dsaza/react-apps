@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect } from 'react'
 
-export function useTargets() {
+export function useTargets () {
   const [guessed, setGuessed] = useState([])
   const [selected, setSelected] = useState([])
 
@@ -32,6 +32,6 @@ export function useTargets() {
       }
     }
   }, [selected])
-  
+
   return { guessed, selected, addSelected, resetSelected, addSelectedToGuessed }
 }
