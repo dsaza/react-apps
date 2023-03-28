@@ -1,0 +1,121 @@
+.Movies {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.Movie-card {
+  background: var(--white-color);
+  border-radius: 1rem;
+  border: 1px solid #D1D1D1;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+.Movie-card:hover .Movie-cardPoster > img,
+.Movie-card:hover .Movie-cardPoster > span {
+  transform: scale(1.05);
+}
+
+.Movie-cardPoster {
+  aspect-ratio: 3/4;
+  overflow: hidden;
+  background: rgba(219, 219, 219, .8);
+  animation: infinite fadeInOut 1s;
+}
+
+.Movie-cardPoster > img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: ease-in .2s all;
+}
+
+.Movie-cardPoster > span {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #E2E2E2;
+  transition: ease-in .2s all;
+  color: #b4b4b4;
+}
+
+.Movie-cardContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  flex-grow: 1;
+  position: relative;
+}
+
+.Movie-cardContent > h3 {
+  font-weight: 600;
+  line-height: 1.15em;
+}
+
+.Movie-cardContent > p {
+  border-top: 1px solid #E5E5E5;
+  margin-top: 1rem;
+  padding-top: .5rem;
+  font-size: .9rem;
+  color: #858585;
+}
+
+.Movie-cardContent > span {
+  position: absolute;
+  right: 1.5rem;
+  bottom: 1rem;
+  font-size: .75rem;
+  font-weight: 600;
+  color: var(--white-color);
+  padding: 1px 10px;
+  border-radius: 1rem;
+  text-transform: capitalize;
+}
+
+.Movie-cardContent > span.is-movie {
+  background: #008000;
+}
+
+.Movie-cardContent > span.is-series {
+  background: #FF4500;
+}
+
+.MoviesLoader {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.MoviesLoader-item {
+  width: 100%;
+  aspect-ratio: 3/4;
+  background: rgba(219, 219, 219, .8);
+  border-radius: 1rem;
+  animation: infinite fadeInOut 1s;
+}
+
+.MoviesEmpty {
+  text-align: center;
+}
+
+@keyframes fadeInOut {
+  0% {
+    background: rgba(219, 219, 219, .4);
+  }
+
+  50% {
+    background: rgba(219, 219, 219, .8);
+  }
+
+  100% {
+    background: rgba(219, 219, 219, .4);
+  }
+}
