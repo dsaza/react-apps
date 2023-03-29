@@ -1,0 +1,100 @@
+.Products {
+  display: grid;
+  grid-template-columns: 190px 1fr;
+  column-gap: 2rem;
+}
+
+@media screen and (max-width: 650px) {
+  .Products {
+    grid-template-columns: 1fr;
+    row-gap: 3rem;
+  }
+}
+
+.Products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.Products-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.Products-itemImage {
+  width: 100%;
+  aspect-ratio: 1/1;
+  background: #f1f1f1;
+  overflow: hidden;
+}
+
+.Products-itemImage > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.Products-itemContent {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 15px;
+}
+
+.Products-itemTitle {
+  margin-bottom: 10px;
+}
+
+.Products-itemTitle > h4 {
+  font-weight: bold;
+}
+
+.Products-itemButtonCart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #757575;
+  width: 100%;
+  height: 40px;
+  font-weight: 600;
+  color: #757575;
+  gap: 1rem;
+}
+
+.Products-itemButtonCart:hover {
+  border-color: var(--main-color);
+  background: var(--main-color);
+  color: #fff;
+}
+
+.Products-itemButtonCart.is-inCart {
+  border: 1px solid var(--green-color);
+  background: var(--green-color);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.Products-itemButtonCart.is-inCart::after {
+  align-items: center;
+  background: var(--red-color);
+  content: 'Remover del carrito';
+  display: none;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.Products-itemButtonCart.is-inCart:hover {
+  border: 1px solid var(--red-color);
+}
+
+.Products-itemButtonCart.is-inCart:hover::after {
+  display: flex;
+}

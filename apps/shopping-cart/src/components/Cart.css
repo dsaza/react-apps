@@ -1,0 +1,185 @@
+.Cart-checkbox {
+  display: none;
+}
+
+.Cart-button {
+  align-items: center;
+  aspect-ratio: 1/1;
+  background: var(--main-color);
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  right: 1rem;
+  top: 10px;
+  width: 40px;
+  z-index: 5;
+}
+
+.Cart-button:active {
+  transform: scale(.95);
+}
+
+.Cart-button > span {
+  align-items: center;
+  background: #fff;
+  border-radius: 50%;
+  border: 1px solid var(--main-color);
+  color: var(--main-color);
+  display: flex;
+  font-size: .7rem;
+  font-weight: bold;
+  height: 20px;
+  justify-content: center;
+  position: absolute;
+  right: 2px;
+  top: 3px;
+  width: 20px;
+}
+
+.Cart-wrapper {
+  width: 100%;
+  max-width: 380px;
+  background: #fafafa;
+  position: fixed;
+  z-index: 4;
+  right: -380px;
+  top: 0;
+  bottom: 0;
+  box-shadow: 0 -4px 10px rgba(0,0,0,.15);
+}
+
+.Cart-checkbox:checked ~ .Cart-wrapper {
+  right: 0;
+  transition: ease all .35s;
+}
+
+.Cart-wrapper {
+  padding: 1rem;
+  overflow: auto;
+}
+
+.Cart-wrapper > h3 {
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.Cart-preview {
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.Cart-preview > p {
+  font-weight: bold;
+  font-size: 1.8rem;
+  margin-bottom: .5rem;
+}
+
+.Cart-preview > button,
+.Cart-preview > label {
+  display: block;
+  width: 100%;
+  color: #fff;
+  font-weight: 600;
+  padding: .5rem 1rem;
+  text-align: center;
+}
+
+.Cart-previewBtnEnd {
+  background: var(--main-color) !important;
+}
+
+.Cart-previewBtnAbort {
+  color: var(--red-color) !important;
+  font-weight: bold;
+  margin-top: 1rem;
+  width: auto;
+}
+
+.Cart-item {
+  border: 1px solid #e6e6e6;
+  background: #fff;
+  margin-bottom: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  position: relative;
+  cursor: default;
+}
+
+.Cart-item > figure {
+  height: 100%;
+  width: 100%;
+  background: #f1f1f1;
+}
+
+.Cart-item > figure > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.Cart-item:last-child {
+  margin-bottom: 0;
+}
+
+.Cart-item:hover .Cart-btnRemove {
+  display: flex;
+}
+
+.Cart-itemContent {
+  padding: .5rem;
+  font-size: .9rem;
+}
+
+.Cart-itemContent > h4 {
+  font-weight: bold;
+  line-height: 1.2em;
+}
+
+.Cart-itemContent > p {
+  font-size: .75rem;
+}
+
+.Cart-btnRemove {
+  align-items: center;
+  aspect-ratio: 1/1;
+  background: var(--red-color) !important;
+  color: #fff;
+  display: none;
+  justify-content: center;
+  position: absolute;
+  right: .5rem;
+  top: .5rem;
+  width: 30px;
+  z-index: 1;
+}
+
+.Cart-itemQuantity {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  margin: .5rem 0;
+}
+
+.Cart-itemQuantity > button {
+  width: 25px;
+  aspect-ratio: 1/1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: var(--main-color);
+  font-weight: bold;
+}
+
+.Cart-itemQuantity > button:disabled {
+  opacity: .6;
+}
+
+.Cart-itemQuantity > span {
+  width: 25px;
+  text-align: center;
+}
