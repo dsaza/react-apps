@@ -5,7 +5,7 @@ export function WordsPerMinute () {
     <div className='container mx-auto px-6 pb-20'>
       <Title text='Palabras por minuto' />
       <main>
-        hola
+        En desarrollo...
       </main>
     </div>
   )

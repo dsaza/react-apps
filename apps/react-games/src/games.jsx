@@ -18,7 +18,7 @@ export const games = [
   {
     id: 'words-per-minute',
     name: 'Palabras por minuto',
-    image: 'memotest.png',
+    image: '',
     element: <WordsPerMinute />
   }
 ]
