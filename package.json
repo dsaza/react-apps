@@ -1,0 +1,13 @@
+{
+  "name": "react-apps",
+  "version": "0.0.0",
+  "workspaces": [
+    "apps/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dsaza/react-apps.git"
+  },
+  "author": "Dayron Daza",
+  "homepage": "https://github.com/dsaza/react-apps#readme"
+}
